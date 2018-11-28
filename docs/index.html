@@ -7,7 +7,7 @@
 		<title>Crypto lessons</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/night.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,6 +36,7 @@
 					<section>
 						<ul>
 							<li>Basics</li>
+							<li>Shift cipher</li>
 							<li>Caesar cipher</li>
 							<li>Simple substitution cipher</li>
 							<li>Mask attack</li>
@@ -57,32 +58,116 @@
 				</section>
 
 				<section>
-					<h4>Into</h4>
+					<h2>Basics</h2>
 					<section>
 
-						<h3>Classic CMS</h3>
-						<img src="images/wp.png"/>
+						<ul>
+							<li>
+								<p class="fragment fade-up">
+									Plaintext
+								</p>
+							</li>
+							<li>
+								<p class="fragment fade-up">
+									Key
+								</p>
+							</li>
+							<li>
+								<p class="fragment fade-up">
+									Ciphertext
+								</p>
+							</li>
+							<li>
+								<p class="fragment fade-up">
+									Chiper - Cryptosystem
+								</p>
+							</li>
+							<li>
+								<p class="fragment fade-up">
+									Encryption
+								</p>
+							</li>
+							<li>
+								<p class="fragment fade-up">
+									Decryption
+								</p>
+							</li>
+						</ul>
 					</section>
 				</section>
 
 				<section>
-					<h3>Git-based CMS</h3>
+					<h3>Encryption & Decryption</h3>
+					<img src="images/encryption_decryption.png">
+				</section>
+
+				<section>
+					<h3>Shift Cipher</h3>
 					<section>
-						<h4>What</h4>
-						<img src="images/ssg.png"/>
-						<p>With a git-based CMS you are pushing changes to git that then triggers a new build of your site.</p>
+						<ul>
+							<li>A substitution cipher</li>
+							<li>
+								The Key Space:
+								<ul>
+									<li>[1 .. 25]</li>
+								</ul>
+							</li>
+							<li>
+								Encryption given a key K:
+								<ul>
+									<li>each letter in the plaintext P is replaced with the K’th letter following corresponding number (shift right)</li>
+								</ul>
+							</li>
+							<li>
+								Decryption given K:
+								<ul>
+									<li>shift left</li>
+								</ul>
+							</li>
+							<li>
+								<p class="fragment highlight-red">
+									History: K = 3, Caesar’s cipher
+								</p>
+							</li>
+						</ul>
 					</section>
 				</section>
 
 				<section>
-					<h2>Why Git-based CMS</h2>
+					<h3>Shift cipher: Example</h3>
+					<section>
+						<img src="images/shift_cipher_example.png">
+					</section>
+				</section>
 
-					<ul>
-						<li>Full version control on all content out of the box.</li>
-						<li class="fragment">All content lives as normal text files so developers can use all the normal tools they use as a developer.</li>
-						<li class="fragment">Much easier to rollback.</li>
-						<li class="fragment">Is the most homogenous approach with the existing git-based workflow of most web-developers.</li>
-					</ul>
+				<section>
+					<h3>Caesar cipher</h3>
+					<section>
+						<img src="images/caesar.gif"/>
+					</section>
+				</section>
+
+				<section>
+					<h3>Shift Cipher: Cryptanalysis</h3>
+					<section>
+						<ul>
+							<li>
+								Can an attacker find K?
+								<ul>
+									<li>YES: exhaustive search,</li>
+									<li>key space is small (&lt;= 26 possible keys)</li>
+									<li>the attacker can search all the key space in very short time</li>
+								</ul>
+							</li>
+							<li>Once K is found, very easy to decrypt</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Simple substitution cipher</h3>
+
+					<img src="images/simple-substitution-cipher.jpg">
 				</section>
 
 				<section>
