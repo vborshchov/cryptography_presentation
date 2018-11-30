@@ -52,20 +52,9 @@
 							<li>Caesar cipher</li>
 							<li>Transposition Cipher</li>
 							<li>Simple substitution cipher</li>
-							<li>Mask attack</li>
-							<li>Frequency analysis</li>
 							<li>Polyalphabetic ciphers</li>
-							<li>Gronsfeld cipher</li>
 							<li>Vigenère cipher</li>
-						</ul>
-					</section>
-
-					<section>
-						<ul>
-							<li>Introduction to asymmetric cryptography. RSA code</li>
-							<li>Hash function</li>
-							<li></li>
-							<li></li>
+							<li>Kerckhoffs’s Principle</li>
 						</ul>
 					</section>
 				</section>
@@ -407,7 +396,84 @@
 				</section>
 
 				<section>
-					<h1>Questions?</h1>
+					<h3>Polyalphabetic Substitution Ciphers</h3>
+
+					<section>
+						<ul>
+							<li>
+								Main weaknesses of monoalphabetic substitution ciphers
+								<ul>
+									<li>each letter in the ciphertext corresponds to only one letter in the plaintext letter</li>
+									<li></li>
+								</ul>
+							</li>
+							<li>
+								Idea for a stronger cipher (1460’s by Alberti)
+								<ul>
+									<li>use more than one cipher alphabet, and switch between them when encrypting different letters</li>
+									<li>Developed into a practical cipher by Vigenère (published in 1586)</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>The Vigenère Cipher</h3>
+
+					<section>
+						<img src="images/vigenere_cipher_75percent.jpg">
+					</section>
+				</section>
+
+				<section>
+					<h3>Security of Vigenère Cipher</h3>
+					<section>
+						<ul>
+							<li>Vigenere masks the frequency with which a character appears in a language: one letter in the ciphertext corresponds to multiple letters in the plaintext. Makes the use of frequency analysis more difficult.</li>
+							<li>Any message encrypted by a Vigenere cipher is a collection of as many shift ciphers as there are letters in the key.</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Vigenere Cipher: Cryptanalysis</h3>
+
+					<section>
+						<h4 class="fragment">Find the length of the key.</h4>
+					</section>
+				</section>
+
+				<section>
+					<h3>Kerckhoffs’s Principle</h3>
+
+					<section>
+						<p>The security of a protocol should rely only on the secrecy of the keys, protocol designs should be made public (1883)</p>
+						<p class="fragment highlight-red">Secrecy of a protocol does not work</p>
+					</section>
+				</section>
+
+				<section>
+					<h4>The end of part 1</h4>
+					<section>
+						<h1>Questions?</h1>
+					</section>
+				</section>
+
+				<section>
+					<h2>Part 2</h2>
+				</section>
+
+				<section>
+					<h2>Table of contents</h2>
+					<section>
+						<ul>
+							<li>Introduction to asymmetric cryptography. RSA code</li>
+							<li>Hash function</li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
