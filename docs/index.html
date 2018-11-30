@@ -20,6 +20,14 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style>
+			#transposition td {
+				width: 30px;
+				font-size: 0.7em;
+				padding: 0 5px;
+				border: none;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -38,6 +46,7 @@
 							<li>Basics</li>
 							<li>Shift cipher</li>
 							<li>Caesar cipher</li>
+							<li>Transposition Cipher</li>
 							<li>Simple substitution cipher</li>
 							<li>Mask attack</li>
 							<li>Frequency analysis</li>
@@ -160,6 +169,105 @@
 								</ul>
 							</li>
 							<li>Once K is found, very easy to decrypt</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Transposition Cipher</h3>
+
+					<section>
+						<ul>
+							<li>
+								Write the plaintext horizontally in fixed number
+								columns and read vertically to encypt.
+								<ul>
+									<li>The ancient Spartans used a form of transposition cipher</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>
+								Example:
+								<ul>
+									<li>
+										P = ‘meet me near the clock tower at twelve midnight tonite’
+										<table id=transposition>
+											<tbody>
+												<tr>
+													<td>m</td>
+													<td>e</td>
+													<td>e</td>
+													<td>t</td>
+													<td>m</td>
+												</tr>
+												<tr>
+													<td>e</td>
+													<td>n</td>
+													<td>e</td>
+													<td>a</td>
+													<td>r</td>
+												</tr>
+												<tr>
+													<td>t</td>
+													<td>h</td>
+													<td>e</td>
+													<td>c</td>
+													<td>l</td>
+												</tr>
+												<tr>
+													<td>o</td>
+													<td>c</td>
+													<td>k</td>
+													<td>t</td>
+													<td>o</td>
+												</tr>
+												<tr>
+													<td>w</td>
+													<td>e</td>
+													<td>r</td>
+													<td>a</td>
+													<td>t</td>
+												</tr>
+												<tr>
+													<td>t</td>
+													<td>w</td>
+													<td>e</td>
+													<td>l</td>
+													<td>v</td>
+												</tr>
+												<tr>
+													<td>e</td>
+													<td>m</td>
+													<td>i</td>
+													<td>d</td>
+													<td>n</td>
+												</tr>
+												<tr>
+													<td>i</td>
+													<td>g</td>
+													<td>h</td>
+													<td>t</td>
+													<td>t</td>
+												</tr>
+												<tr>
+													<td>o</td>
+													<td>n</td>
+													<td>i</td>
+													<td>t</td>
+													<td>e</td>
+												</tr>
+											</tbody>
+										</table>
+									</li>
+									<li>
+											C =‘metowteioenhcewmgneeekreihitactaldttmrlotvnte’
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</section>
 				</section>
