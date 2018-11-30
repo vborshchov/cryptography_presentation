@@ -27,6 +27,10 @@
 				padding: 0 5px;
 				border: none;
 			}
+
+			.small li{
+				font-size: 90%;
+			}
 		</style>
 	</head>
 	<body>
@@ -273,9 +277,133 @@
 				</section>
 
 				<section>
+					<h3>Transposition Cipher: Cryptanalysis</h3>
+					<section>
+						<ul>
+							<li>
+								Can an attacker decrypt a transposed text?
+								<ul>
+									<li>Do exhaustive search on number of columns</li>
+									<li>Since the key space is small, the attacker can search all the key space in very short time</li>
+								</ul>
+							</li>
+							<li>Once the number of columns is guessed, very easy to decrypt</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
 					<h3>Simple substitution cipher</h3>
 
 					<img src="images/simple-substitution-cipher.jpg">
+				</section>
+
+				<section>
+					<h3>General Substitution Cipher: Cryptanalysis</h3>
+							
+					<section>
+						<ul>
+							<li>
+								Exhaustive search is infeasible
+								<ul>
+									<li>for the letter A, there are 25 probabilities</li>
+									<li>for the letter B, there are 24 probabilities</li>
+									<li>for the letter C, there are 24 probabilities</li>
+									<li>... and so on</li>
+									<li>Key space size is 25! ≈ 1.6*10^25</li>
+								</ul>
+							</li>
+							
+						</ul>
+						<p class="fragment">25! = 15511210043330985984000000</p>
+					</section>
+				</section>
+
+				<section>
+					<h3>Cryptanalysis of Substitution Ciphers: Frequency Analysis</h3>
+
+					<section>
+						<ul>
+							<li>
+								Basic ideas:
+								<ul>
+									<li>Each language has certain features: frequency of letters, or of groups of two or more letters.</li>
+									<li>Substitution ciphers preserve the language features.</li>
+									<li>Substitution ciphers are vulnerable to frequency analysis attacks.</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								History of frequency analysis:
+								<ul>
+									<li>Earliest known description of frequency analysis is in a book by the ninth-century scientist al-Kindi</li>
+									<li>Rediscovered or introduced from the Arabs in the Europe during the Renaissance</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Frequency Features of English</h3>
+					<section>
+						<img src="images/relative_letter_frequency_150x.jpg">
+					</section>
+					<section>
+						<ul>
+							<li>Vowels, which constitute 40 % of plaintext, are often separated by consonants.</li>
+							<li>Letter A is often found in the beginning of a word or second from last.</li>
+							<li>Letter I is often third from the end of a word.</li>
+							<li>Letter Q is followed only by U</li>
+							<li>Some words are more frequent, such as the, and, at, is, on, in</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Improve the Security of Substitution Cipher</h3>
+
+					<section class="small">
+						<ul>
+							<li>
+								Using nulls
+								<ul>
+									<li>e.g., using numbers from 1 to 99 as the ciphertext alphabet, some numbers representing nothing are inserted randomly</li>
+								</ul>
+							</li>
+							<li>
+								Deliberately misspell words
+								<ul>
+									<li>e.g., “Thys haz thi ifekkt off diztaughting thi ballans off frikwenseas”</li>
+								</ul>
+							</li>
+							<li>
+								Homophonic substitution cipher
+								<ul>
+									<li>each letter is replaced by a variety of substitutes</li>
+								</ul>
+							</li>
+							<li>These make frequency analysis more difficult, but not impossible</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h3>Summary</h3>
+
+					<section>
+						<ul>
+							<li>
+								Shift ciphers are easy to break using brute force attacks, they have small key space.
+							</li>
+							<li>
+								Substitution ciphers preserve language features and are vulnerable to frequency analysis attacks.
+							</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
